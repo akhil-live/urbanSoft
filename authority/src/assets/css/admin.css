@@ -2289,6 +2289,9 @@ label.error {
 .table-head-bg-light thead {
   border: 1px solid #e7e7e7 !important; }
 
+.table-head-bg-purple thead {
+  border: 1px solid #e7e7e7 !important; }
+
 .table-head-bg-black thead th, .table-striped-bg-black tbody tr:nth-of-type(odd) {
   background: #1a2035 !important;
   color: #ffffff !important;
@@ -2329,6 +2332,10 @@ label.error {
   color: #000000 !important;
   border: 0px !important; }
 
+.table-head-bg-purple thead th, .table-striped-bg-purple tbody tr:nth-of-type(odd) {
+  background: #a69fff !important;
+  color: #000000 !important;
+  border: 0px !important; }
 
 /* table-responsive */
 .table-responsive {
@@ -4303,3 +4310,4 @@ body {
   cursor: pointer; 
   color: #9b9b9b;
 }
+
