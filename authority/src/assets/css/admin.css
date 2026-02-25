@@ -101,6 +101,13 @@ b, .b, strong, .strong {
   font-weight: 600; 
 }
 
+.ri-asterisk {
+  position: absolute;
+  font-size: 8px;
+  color: rgb(255, 85, 85);
+  padding: 0px 0px 3px 3px;
+  font-weight: 600;
+}
 
 /* Layout */
 body {
@@ -4310,5 +4317,6 @@ body {
   cursor: pointer; 
   color: #9b9b9b;
 }
+
 
 
