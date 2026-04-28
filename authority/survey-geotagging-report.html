@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Report</title>
+    <title>Survey Geotagging Report</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -587,7 +587,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="survey-geotagging-report.html ">
+                      <a href="survey-geotagging-report.html">
                         <span class="sub-item">Survey Geotagging Report</span>
                       </a>
                     </li>
@@ -837,7 +837,7 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Survey Report</h4>
+              <h4 class="fw-bold mb-3">Survey Geotagging Report</h4>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
                   <a href="index.html">
@@ -854,7 +854,7 @@
                   <i class="ri-arrow-right-s-line"></i>
                 </li>
                 <li class="nav-item">
-                  <span class="op-7">Survey Report</span>
+                  <span class="op-7">Survey Geotagging Report</span>
                 </li>
               </ul>
             </div>
@@ -866,83 +866,16 @@
                       <div class="row">
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="startDate">Start Date</label>
+                              <label for="startDate">Date From <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="startDate" name="startDate" value="2026-01-23" required>
                             </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="endDate">End Date</label>
+                              <label for="endDate">Date To <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="endDate" name="endDate" value="2026-01-23" required>
                             </div>
                           </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="wardNo">Ward No.</label>
-                                <select class="form-select" id="wardNo" name="wardNo" required>
-                                  <option value="">All</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                </select>    
-                            </div>                       
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="zoneName">Zone</label>
-                                <select class="form-select" id="zoneName" name="zoneName">
-                                  <option value="">Select</option>
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="taxable">Is Taxable</label>
-                                <select class="form-select" id="taxable" name="taxable">
-                                  <option value="">Select</option>
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="isAssessed">Is Assessed</label>
-                                <select class="form-select" id="isAssessed" name="isAssessed">
-                                  <option value="">Select</option>
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="operatorName">Operator Name</label>
-                                <select class="form-select" id="operatorName" name="operatorName">
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="surveyNo">Survey No.</label>
-                              <input type="text" class="form-control" id="surveyNo" name="surveyNo" value="">
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="serviceNo">Service No.</label>
-                              <input type="text" class="form-control" id="serviceNo" name="serviceNo" value="">
-                            </div>
-                          </div>
-                          
                       </div>
                       <div class="col-12 py-3 text-center">
                           <button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button>
@@ -952,103 +885,51 @@
                   </div>
 
                   <div class="card-body">
-                    <div class="table-responsive" id="printableArea">
+                    <div class="table-responsive">
                           <div class="d-print-none">
                             <p class="text-start">
-                                <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
+                              <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
                             </p>
                           </div>
-                      <table id="basic-datatables" class="display table table-hover table-bordered">
+                      <table id="basic-datatables" class="display table table-hover table-bordered table-head-bg-light">
                         <thead>
                           <tr>
-                            <th colspan="38" class="text-start bg-light"><strong>Survey Report</strong></th>
+                            <th colspan="16" class="text-center"><strong>Report From - <span>Date</span> To <span>Date</span></strong></th>
                           </tr>
-                          <tr>
+                          <tr class="text-center">
                             <th>#</th>
                             <th>Survey No.</th>
-                            <th>Service No.</th>
                             <th>Zone Name</th>
                             <th>Ward No.</th>
-                            <th>Property Usage</th>
-                            <th>Property Category</th>
-                            <th>DLC Area</th>
-                            <th>Plot Area</th>
-                            <th>Plinth Area</th>
-                            <th>Total Builtup Area</th>
+                            <th>Survey Date</th>
                             <th>Owner Name</th>
-                            <th>Gender</th>
                             <th>Mobile No.</th>
-                            <th>Ownership Type</th>
-                            <th>Road Name</th>
-                            <th>Colony Name</th>
-                            <th>House No.</th>
-                            <th>Building Name</th>
-                            <th>Landmark</th>
-                            <th>Communication Address</th>
-                            <th>Permanent Address</th>
+                            <th>Application Status</th>
                             <th>Operator Name</th>
-                            <th>Multistorage</th>
-                            <th>Is Taxable</th>
-                            <th>Is Ex-Party</th>
-                            <th>Is Assessed</th>
-                            <th>Tax Paid</th>
-                            <th>Survey On</th>
+                            <th>Geotagging Date</th>
                             <th>Latitude</th>
                             <th>Longitude</th>
-                            <th>FO Latitude</th>
-                            <th>FO Longitude</th>
-                            <th>Application Status</th>
-                            <th>QR Status</th>
-                            <th>Action</th>
-                            <th>Survey Asses Form</th>
-                            <th>Survey Form (Modified)</th>
+                            <th>View Map</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr class="text-center">
                             <td>1</td>
-                            <td>SRV3/34/293667</td>
-                            <td>None</td>
+                            <td><a href="survey-report-view.html" target="_blank">SRV3/49/292321</a></td>
                             <td>Civil Line</td>
-                            <td>34</td>
-                            <td>Residential</td>
-                            <td>General</td>
-                            <td>SINDHI COLONY - SINDHI COLONY</td>
-                            <td>711.00</td>
-                            <td>300.00</td>
-                            <td>3460.00</td>
-                            <td>Exterior Road</td>
-                            <td>MOLCHAND AADWANI</td>
-                            <td>Male</td>
-                            <td>1234567890</td>
-                            <td>Allotment Land / House</td>
-                            <td>-</td>
-                            <td>SINDHI COLONY</td>
-                            <td>104</td>
-                            <td>SINDHI COLONY</td>
-                            <td>104 SINDHI COLONY BANI PARK</td>
-                            <td>104 SINDHI COLONY BANI PARK</td>
-                            <td>LALCHAND YADAV (4660)</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>None</td>
-                            <td>No</td>
-                            <td>Feb 2, 2026</td>
-                            <td>26.932372</td>
-                            <td>75.932372</td>
-                            <td>26.932372</td>
-                            <td>75.932372</td>
-                            <td>Pending At FO</td>
-                            <td>No</td>
+                            <td>98</td>
+                            <td>Feb. 6, 2026</td>
+                            <td>MUNI MAN RANJAN GANESH NARAYAN SHAR</td>
+                            <td>1111111111</td>
+                            <td>Approved</td>
+                            <td>MAHENDRA</td>
+                            <td>March 27, 2026</td>
+                            <td>26.9023949625</td>
+                            <td>75.7974031940</td>
                             <td>
-                              <a href="survey-report-view.html"><button class="btn btn-info btn-xs my-1">View</button></a>
-                              <a href="survey-report-edit.html"><button class="btn btn-success btn-xs">Edit</button></a>
+                              <a href="survey-map-view.html" target="_blank"><button class="btn btn-warning btn-xs my-1">View Map</button></a>
                             </td>
-                            <td><a href=""><i class="ri-file-download-line" style="font-size: 20px;"></i></a></td>
-                            <td><a href=""><i class="ri-file-download-line" style="font-size: 20px;"></i></a></td>
                           </tr>
-                          
                         </tbody>
                       </table>
                     </div>
@@ -1155,7 +1036,7 @@
         XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
         XLSX.writeFile(wb, "data.xlsx");
     }
+  
     </script>
 </body>
-
 </html>

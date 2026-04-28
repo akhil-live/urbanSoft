@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Report</title>
+    <title>Survey Level Summary Report</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -837,7 +837,7 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Survey Report</h4>
+              <h4 class="fw-bold mb-3">Survey Level Summary Report</h4>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
                   <a href="index.html">
@@ -854,7 +854,7 @@
                   <i class="ri-arrow-right-s-line"></i>
                 </li>
                 <li class="nav-item">
-                  <span class="op-7">Survey Report</span>
+                  <span class="op-7">Survey Level Summary Report</span>
                 </li>
               </ul>
             </div>
@@ -866,83 +866,16 @@
                       <div class="row">
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="startDate">Start Date</label>
+                              <label for="startDate">Date From <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="startDate" name="startDate" value="2026-01-23" required>
                             </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="endDate">End Date</label>
+                              <label for="endDate">Date To <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="endDate" name="endDate" value="2026-01-23" required>
                             </div>
                           </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="wardNo">Ward No.</label>
-                                <select class="form-select" id="wardNo" name="wardNo" required>
-                                  <option value="">All</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                </select>    
-                            </div>                       
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="zoneName">Zone</label>
-                                <select class="form-select" id="zoneName" name="zoneName">
-                                  <option value="">Select</option>
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="taxable">Is Taxable</label>
-                                <select class="form-select" id="taxable" name="taxable">
-                                  <option value="">Select</option>
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="isAssessed">Is Assessed</label>
-                                <select class="form-select" id="isAssessed" name="isAssessed">
-                                  <option value="">Select</option>
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="operatorName">Operator Name</label>
-                                <select class="form-select" id="operatorName" name="operatorName">
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="surveyNo">Survey No.</label>
-                              <input type="text" class="form-control" id="surveyNo" name="surveyNo" value="">
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="serviceNo">Service No.</label>
-                              <input type="text" class="form-control" id="serviceNo" name="serviceNo" value="">
-                            </div>
-                          </div>
-                          
                       </div>
                       <div class="col-12 py-3 text-center">
                           <button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button>
@@ -953,103 +886,75 @@
 
                   <div class="card-body">
                     <div class="table-responsive" id="printableArea">
-                          <div class="d-print-none">
-                            <p class="text-start">
-                                <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
-                            </p>
-                          </div>
-                      <table id="basic-datatables" class="display table table-hover table-bordered">
+                      <div class="d-print-none">
+                        <p class="text-start">
+                          <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
+                          <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
+                        </p>
+                      </div>
+                      <table class="display table table-hover table-bordered table-head-bg-light">
                         <thead>
                           <tr>
-                            <th colspan="38" class="text-start bg-light"><strong>Survey Report</strong></th>
+                            <th colspan="16" class="text-center"><strong>Survey Level Summary Report From - Date To Date</strong></th>
                           </tr>
                           <tr>
                             <th>#</th>
-                            <th>Survey No.</th>
-                            <th>Service No.</th>
                             <th>Zone Name</th>
-                            <th>Ward No.</th>
-                            <th>Property Usage</th>
-                            <th>Property Category</th>
-                            <th>DLC Area</th>
-                            <th>Plot Area</th>
-                            <th>Plinth Area</th>
-                            <th>Total Builtup Area</th>
-                            <th>Owner Name</th>
-                            <th>Gender</th>
-                            <th>Mobile No.</th>
-                            <th>Ownership Type</th>
-                            <th>Road Name</th>
-                            <th>Colony Name</th>
-                            <th>House No.</th>
-                            <th>Building Name</th>
-                            <th>Landmark</th>
-                            <th>Communication Address</th>
-                            <th>Permanent Address</th>
-                            <th>Operator Name</th>
-                            <th>Multistorage</th>
-                            <th>Is Taxable</th>
-                            <th>Is Ex-Party</th>
-                            <th>Is Assessed</th>
-                            <th>Tax Paid</th>
-                            <th>Survey On</th>
-                            <th>Latitude</th>
-                            <th>Longitude</th>
-                            <th>FO Latitude</th>
-                            <th>FO Longitude</th>
-                            <th>Application Status</th>
-                            <th>QR Status</th>
-                            <th>Action</th>
-                            <th>Survey Asses Form</th>
-                            <th>Survey Form (Modified)</th>
+                            <th>Forwarded By FO</th>
+                            <th>Forwarded By BO</th>
+                            <th>Back By BO</th>
+                            <th>Forwarded By PM</th>
+                            <th>Forwarded By RI</th>
+                            <th>Auto Forwarded From RI</th>
+                            <th>Back By RI</th>
+                            <th>Forwarded By RO</th>
+                            <th>Auto Forwarded From RO</th>
+                            <th>Back By RO</th>
+                            <th>Approved</th>
+                            <th>Auto Approved</th>
+                            <th>Back By ZC</th>
+                            <th>Taxable Approve</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td>SRV3/34/293667</td>
-                            <td>None</td>
-                            <td>Civil Line</td>
-                            <td>34</td>
-                            <td>Residential</td>
-                            <td>General</td>
-                            <td>SINDHI COLONY - SINDHI COLONY</td>
-                            <td>711.00</td>
-                            <td>300.00</td>
-                            <td>3460.00</td>
-                            <td>Exterior Road</td>
-                            <td>MOLCHAND AADWANI</td>
-                            <td>Male</td>
-                            <td>1234567890</td>
-                            <td>Allotment Land / House</td>
-                            <td>-</td>
-                            <td>SINDHI COLONY</td>
-                            <td>104</td>
-                            <td>SINDHI COLONY</td>
-                            <td>104 SINDHI COLONY BANI PARK</td>
-                            <td>104 SINDHI COLONY BANI PARK</td>
-                            <td>LALCHAND YADAV (4660)</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>None</td>
-                            <td>No</td>
-                            <td>Feb 2, 2026</td>
-                            <td>26.932372</td>
-                            <td>75.932372</td>
-                            <td>26.932372</td>
-                            <td>75.932372</td>
-                            <td>Pending At FO</td>
-                            <td>No</td>
-                            <td>
-                              <a href="survey-report-view.html"><button class="btn btn-info btn-xs my-1">View</button></a>
-                              <a href="survey-report-edit.html"><button class="btn btn-success btn-xs">Edit</button></a>
-                            </td>
-                            <td><a href=""><i class="ri-file-download-line" style="font-size: 20px;"></i></a></td>
-                            <td><a href=""><i class="ri-file-download-line" style="font-size: 20px;"></i></a></td>
+                            <td>Malviya Nagar</td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">5</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">6</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">11</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">1</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">13</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">13</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">0</a></td>
+                            <td><a href="survey-level-forward-details.html" target="_blank">13</a></td>
                           </tr>
-                          
                         </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="2" class="fw-bold text-center">Total</td>
+                            <td class="fw-bold">34</td>
+                            <td class="fw-bold">34</td>
+                            <td class="fw-bold">0</td>
+                            <td class="fw-bold">0</td>
+                            <td class="fw-bold">24</td>
+                            <td class="fw-bold">27</td>
+                            <td class="fw-bold">4</td>
+                            <td class="fw-bold">29</td>
+                            <td class="fw-bold">82</td>
+                            <td class="fw-bold">2</td>
+                            <td class="fw-bold">23</td>
+                            <td class="fw-bold">84</td>
+                            <td class="fw-bold">0</td>
+                            <td class="fw-bold">104</td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>
@@ -1079,83 +984,82 @@
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <script src="src/assets/js/admin.js"></script>
 <script>
-      $(document).ready(function () {
-        $("#basic-datatables").DataTable({});
+  $(document).ready(function () {
+    $("#basic-datatables").DataTable({});
 
-        $("#multi-filter-select").DataTable({
-          pageLength: 10,
-          initComplete: function () {
-            this.api()
-              .columns()
-              .every(function () {
-                var column = this;
-                var select = $(
-                  '<select class="form-select"><option value=""></option></select>'
-                )
-                  .appendTo($(column.footer()).empty())
-                  .on("change", function () {
-                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
-
-                    column
-                      .search(val ? "^" + val + "$" : "", true, false)
-                      .draw();
-                  });
+    $("#multi-filter-select").DataTable({
+      pageLength: 10,
+      initComplete: function () {
+        this.api()
+          .columns()
+          .every(function () {
+            var column = this;
+            var select = $(
+              '<select class="form-select"><option value=""></option></select>'
+            )
+              .appendTo($(column.footer()).empty())
+              .on("change", function () {
+                var val = $.fn.dataTable.util.escapeRegex($(this).val());
 
                 column
-                  .data()
-                  .unique()
-                  .sort()
-                  .each(function (d, j) {
-                    select.append(
-                      '<option value="' + d + '">' + d + "</option>"
-                    );
-                  });
+                  .search(val ? "^" + val + "$" : "", true, false)
+                  .draw();
               });
-          },
-        });
 
-        // Add Row
-        $("#add-row").DataTable({
-          pageLength: 10,
-        });
+            column
+              .data()
+              .unique()
+              .sort()
+              .each(function (d, j) {
+                select.append(
+                  '<option value="' + d + '">' + d + "</option>"
+                );
+              });
+          });
+      },
+    });
 
-        var action =
-          '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+    // Add Row
+    $("#add-row").DataTable({
+      pageLength: 10,
+    });
 
-        $("#addRowButton").click(function () {
-          $("#add-row")
-            .dataTable()
-            .fnAddData([
-              $("#addName").val(),
-              $("#addPosition").val(),
-              $("#addOffice").val(),
-              action,
-            ]);
-          $("#addRowModal").modal("hide");
-        });
-      });
+    var action =
+      '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
 
-    function printTable(areaID) 
-    {
-        var printContent = document.getElementById(areaID).innerHTML;
-        var originalContent = document.body.innerHTML;
-        document.body.innerHTML = printContent;
-        window.print();
-        document.body.innerHTML = originalContent;
-    }
-
-    function exportExcel() {
-        let table = $('#basic-datatables').DataTable();
-        let data = table.rows({ search: 'applied' }).data().toArray();
-        let ws = XLSX.utils.aoa_to_sheet([
-            table.columns().header().toArray().map(th => th.innerText),
-            ...data
+    $("#addRowButton").click(function () {
+      $("#add-row")
+        .dataTable()
+        .fnAddData([
+          $("#addName").val(),
+          $("#addPosition").val(),
+          $("#addOffice").val(),
+          action,
         ]);
-        let wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-        XLSX.writeFile(wb, "data.xlsx");
-    }
-    </script>
-</body>
+      $("#addRowModal").modal("hide");
+    });
+  });
 
+function printTable(areaID) 
+{
+    var printContent = document.getElementById(areaID).innerHTML;
+    var originalContent = document.body.innerHTML;
+    document.body.innerHTML = printContent;
+    window.print();
+    document.body.innerHTML = originalContent;
+}
+
+function exportExcel() {
+    let table = $('#basic-datatables').DataTable();
+    let data = table.rows({ search: 'applied' }).data().toArray();
+    let ws = XLSX.utils.aoa_to_sheet([
+        table.columns().header().toArray().map(th => th.innerText),
+        ...data
+    ]);
+    let wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    XLSX.writeFile(wb, "data.xlsx");
+}
+</script>
+</body>
 </html>
