@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Reverification Search</title>
+    <title>Re Verification</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
           <div class="logo-header" data-background-color="inky">
             <a href="index.html" class="logo">
               <img src="../../assets/images/logo/raj.png" alt="navbar brand" class="navbar-brand" height="44"/>
-              <h4 style="color: white; padding: 6px 0 0 8px;"><strong>Nagar Nigam Jaipur</strong></h4>
+              <h4 style="color: white; padding: 6px 0 0 8px; font-size: 1rem;"><strong>Nagar Nigam Jaipur</strong></h4>
             </a>
             <div class="nav-toggle">
               <button class="btn btn-toggle toggle-sidebar">
@@ -706,7 +706,7 @@
             <div class="logo-header" data-background-color="inky">
               <a href="index.html" class="logo">
                 <img src="../../assets/images/logo/raj.png" alt="navbar brand" class="navbar-brand" height="20"/>
-                <h6 style="color: white; padding: 6px 0 0 8px;"><strong>Rajasthan Municipal</strong></h6>
+                <h6 style="color: white; padding: 6px 0 0 8px;"><strong>Nagar Nigam Jaipur</strong></h6>
               </a>
               <div class="nav-toggle">
                 <button class="btn btn-toggle toggle-sidebar">
@@ -780,27 +780,354 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Property Reverification search</h4>
+              <h4 class="fw-bold mb-3">Re Verification</h4>
+              <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                  <a href="index.html">
+                    <i class="ri-home-3-line"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+                <li class="nav-item">
+                  <span class="op-7">SAF</span>
+                </li>
+                <li class="separator">
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+                <li class="nav-item">
+                  <span class="op-7">Re Verification</span>
+                </li>
+              </ul>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header d-print-none">
-                    <a href="../index.html"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i></i> Back</strong></button></a>
+                <div class="card card-stats card-round">
+                  <div class="card-header d-print-none text-start">
+                    <a href="property-reassessment-search.html"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i></i> Back</strong></button></a>
                   </div>
-
                   <div class="card-body">
+                    <div class="row">
+                      <h5 class="pb-1"><strong>Property Details (Modified)</strong></h5>
+                    </div>
                     <div class="row">
                       <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="form-group">
-                          <label for="serviceNo">Service No.</label>
-                          <input type="text" class="form-control" id="serviceNo" placeholder="Enter Service Number">                          
+                          <label for="surveyNo">Survey No.</label>
+                          <p class="fw-bold">SRV2/119/407104</p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 p-3  text-start">
-                        <a href="re-verification.html"><button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button></a>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="serviceNo">Old Service No.</label>
+                          <p class="fw-bold">513868212</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="wardNo">Ward No.</label>
+                          <p class="fw-bold">68</p> 
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="areaName">Area Name</label>
+                          <p class="fw-bold">PINK CITY ENCLAVE, JAGATPURA</p>  
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="roadType">Road Type</label>
+                          <p class="fw-bold">Interior Road</p>
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="plotArea">Plot Area (in Sq Yd)</label>
+                          <p class="fw-bold">500.0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="plinthArea">Plinth Area (in Sq Yd)</label>
+                          <p class="fw-bold">200.0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="vacantArea">Vacant Area (in Sq Yd) </label>
+                          <p class="fw-bold">300.0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="multiStorage">Multi Storage/Complex</label>
+                          <p class="fw-bold">No</p>
+                        </div>                       
+                      </div>
                     </div>
+                    
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Permanent Address (Modified)</strong></h5>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="HouseNo">House No.</label>
+                          <p class="fw-bold">178</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="colony">Colony Name</label>
+                          <p class="fw-bold">PINK CITY ENCLAVE</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="street">Street</label>
+                          <p class="fw-bold">GYAN VIHAR ROAD</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="landmark ">Landmark</label>
+                          <p class="fw-bold">GYAN VIHAR COLLAGE</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="pincode">Pin Code</label>
+                          <p class="fw-bold">302017</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobile">Mobile No.</label>
+                          <p class="fw-bold">1234567890</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="city ">Address (City) </label>
+                          <p class="fw-bold">178 PINK CITY ENCLAVE GYAN VIHAR COLLAGE JAGATPURA JAIPUR</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Current Address (Modified)</strong></h5>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="HouseNo">House No.</label>
+                          <p class="fw-bold">178</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="colony">Colony Name</label>
+                          <p class="fw-bold">PINK CITY ENCLAVE</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="street">Street</label>
+                          <p class="fw-bold">GYAN VIHAR ROAD</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="landmark ">Landmark</label>
+                          <p class="fw-bold">GYAN VIHAR COLLAGE</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="pincode">Pin Code</label>
+                          <p class="fw-bold">302017</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobile">Mobile No.</label>
+                          <p class="fw-bold">1234567890</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="city ">Address (City) </label>
+                          <p class="fw-bold">178 PINK CITY ENCLAVE GYAN VIHAR COLLAGE JAGATPURA JAIPUR</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Owners Details (Modified)</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="ownerName">Owner Name</label>
+                          <p class="fw-bold">PROPERTY OWNER</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="relation">Relation</label>
+                          <p class="fw-bold">C/O</p>    
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="guardianName">Guardian Name</label>
+                          <p class="fw-bold">None</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="age">Age</label>
+                          <p class="fw-bold">29</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobileNo">Mobile No.</label>
+                          <p class="fw-bold">1234567890</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="gender">Gender</label>
+                          <p class="fw-bold">MALE</p>   
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="occupation">Occupation</label>
+                          <p class="fw-bold">Others</p>   
+                        </div>                       
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="py-2"><strong>Floor Details (Modified)</strong></h5>
+                      <div class="table-responsive">
+                        <table class="display table table-bordered my-3 table-head-bg-light" width="100%">
+                          <thead>
+                            <tr class="text-center">
+                              <th>Code</th>
+                              <th>Floor Name</th>
+                              <th>Usage Type</th>
+                              <th>Usage Category</th>
+                              <th>From Year</th>
+                              <th>Upto Year</th>
+                              <th>Built Up Area (in Sq ft)</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="text-center">
+                              <td>Vacant</td>
+                              <td>Vacant Land</td>
+                              <td>Residential</td>
+                              <td>General</td>
+                              <td>2007-2008</td>
+                              <td>2025-2026</td>
+                              <td>1800.0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="py-2"><strong>Floor and Year wise Tax (Modified)</strong></h5>
+                      <div class="table-responsive">
+                        <table class="display table table-bordered my-3 table-head-bg-light" width="100%">
+                          <thead>
+                            <tr class="text-center">
+                              <th>Usage Type</th>
+                              <th>Year</th>
+                              <th>Rate</th>
+                              <th>Area</th>
+                              <th>Yearly Tax</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="text-center">
+                              <td>Residential</td>
+                              <td>2007-2008</td>
+                              <td>3300.00</td>
+                              <td>500.0</td>
+                              <td>825.0</td>
+                            </tr>
+                            <tr class="text-center">
+                              <td>Residential</td>
+                              <td>2008-2009</td>
+                              <td>4130.00</td>
+                              <td>500.0</td>
+                              <td>1032.5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="py-2"><strong class="text-danger">Difference Tax Summary</strong></h5>
+                      <div class="table-responsive">
+                        <table class="display table table-bordered my-3 table-head-bg-light" width="100%">
+                          <thead>
+                            <tr class="text-center">
+                              <th>Effect From</th>
+                              <th>Modified Yearly Tax</th>
+                              <th>Earlier Yearly Tax</th>
+                              <th>Difference Tax</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="text-center">
+                              <td>2007-2008</td>
+                              <td>71940.0</td>
+                              <td><input type="number" value="0"></td>
+                              <td class="text-danger">71940.0</td>
+                            </tr>
+                            <tr class="text-center">
+                              <td>2008-2009</td>
+                              <td>94960.0</td>
+                              <td><input type="number" value="0"></td>
+                              <td class="text-danger">94960.0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div style="border: 1px solid rgb(231, 231, 231); padding: 0px 5px;">
+                        <p><strong class="text-start text-danger">Total Tax Difference : <span class="text-start text-danger">4498303.0 </span></strong></p>
+                      </div>
+                    </div>
+                    <div class="row pt-2">
+                      <h5 class="py-2"><strong>Document And Remark</strong></h5>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                          <label for="uploadDoc">Document Upload</label>
+                          <input type="file" class="form-control mb-3" id="uploadDoc" name="uploadDoc">
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                          <label for="yourRemark">Your Remarks</label>
+                            <select class="form-select" id="yourRemark" name="yourRemark" required>
+                              <option value="">Select Remark</option>
+                              <option value="">As Per Note Sheet Level RO</option>
+                          </select>    
+                        </div> 
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                          <label for="addRemarks">Your Remarks</label>
+                          <textarea class="form-control" name="addRemarks" id="addRemarks" cols="20" rows="4" placeholder="Type your remarks here.."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-print-none">
+                        <p class="text-center pt-3">
+                            <a href="#"><button type="submit" class="btn btn-success btn-sm" name="submit"><strong>Save</strong></button></a>
+                        </p>
+                    </div>
+                  </div>
                   </div>
 
                 </div>

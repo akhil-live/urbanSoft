@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Reverification Search</title>
+    <title>Re Verification</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
           <div class="logo-header" data-background-color="inky">
             <a href="index.html" class="logo">
               <img src="../../assets/images/logo/raj.png" alt="navbar brand" class="navbar-brand" height="44"/>
-              <h4 style="color: white; padding: 6px 0 0 8px;"><strong>Nagar Nigam Jaipur</strong></h4>
+              <h4 style="color: white; padding: 6px 0 0 8px; font-size: 1rem;"><strong>Nagar Nigam Jaipur</strong></h4>
             </a>
             <div class="nav-toggle">
               <button class="btn btn-toggle toggle-sidebar">
@@ -706,7 +706,7 @@
             <div class="logo-header" data-background-color="inky">
               <a href="index.html" class="logo">
                 <img src="../../assets/images/logo/raj.png" alt="navbar brand" class="navbar-brand" height="20"/>
-                <h6 style="color: white; padding: 6px 0 0 8px;"><strong>Rajasthan Municipal</strong></h6>
+                <h6 style="color: white; padding: 6px 0 0 8px;"><strong>Nagar Nigam Jaipur</strong></h6>
               </a>
               <div class="nav-toggle">
                 <button class="btn btn-toggle toggle-sidebar">
@@ -780,27 +780,348 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Property Reverification search</h4>
+              <h4 class="fw-bold mb-3">Re Verification</h4>
+              <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                  <a href="index.html">
+                    <i class="ri-home-3-line"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+                <li class="nav-item">
+                  <span class="op-7">SAF</span>
+                </li>
+                <li class="separator">
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+                <li class="nav-item">
+                  <span class="op-7">Re Verification</span>
+                </li>
+              </ul>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header d-print-none">
-                    <a href="../index.html"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i></i> Back</strong></button></a>
+                <div class="card card-stats card-round">
+                  <div class="card-header d-print-none text-start">
+                    <a href="survey.html"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i></i> Back</strong></button></a>
                   </div>
-
                   <div class="card-body">
+                    <div class="row">
+                      <h5 class="pb-1"><strong>Property Details</strong></h5>
+                    </div>
                     <div class="row">
                       <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="form-group">
-                          <label for="serviceNo">Service No.</label>
-                          <input type="text" class="form-control" id="serviceNo" placeholder="Enter Service Number">                          
+                          <label for="surveyNo">Survey No.</label>
+                           <input type="text" id="surveyNo" name="surveyNo" class="form-control">
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 p-3  text-start">
-                        <a href="re-verification.html"><button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button></a>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="oldServiceNo">Old Service No.</label>
+                           <input type="text" id="oldServiceNo" name="oldServiceNo" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="wardNo">Ward No.</label>
+                            <select class="form-select" id="wardNo" name="wardNo" required>
+                              <option value="">Select Ward</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>    
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="areaName">Area Name</label>
+                            <select class="form-select" id="areaName" name="areaName" required>
+                              <option value="">Select Area</option>
+                              <option value="">4S Scheme</option>
+                              <option value="">4S Colony</option>
+                            </select>    
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="roadType">Road Type</label>
+                            <select class="form-select" id="roadType" name="roadType" required>
+                              <option value="">Select</option>
+                              <option value="">Interior Road</option>
+                              <option value="">Exterior Road</option>
+                            </select>    
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="plotArea">Plot Area (in Sq Yd)</label>
+                          <input type="text" id="plotArea" name="plotArea" class="form-control" placeholder="Enter plot area" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="plinthArea">Plinth Area (in Sq Yd)</label>
+                          <input type="text" id="plinthArea" name="plinthArea" class="form-control" placeholder="Enter plinth area" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="vacantArea">Vacant Area (in Sq Yd) </label>
+                          <input type="text" id="vacantArea" name="vacantArea" class="form-control" placeholder="Enter vacant area" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="multiStorage">Multi Storage/Complex</label>
+                            <select class="form-select" id="multiStorage" name="multiStorage" required>
+                              <option value="">Select</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>    
+                        </div>                       
+                      </div>
                     </div>
+                    
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Permanent Address</strong></h5>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="HouseNo">House No.</label>
+                           <input type="text" id="HouseNo" name="HouseNo" class="form-control" placeholder="Enter House Number" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="colony">Colony Name</label>
+                           <input type="text" id="colony" name="colony" class="form-control" placeholder="Enter Mohalla / Colony Name" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="street">Street</label>
+                          <input type="text" id="street" name="street" class="form-control" placeholder="Enter street name">
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="landmark ">Landmark</label>
+                          <input type="text" id="landmark" name="landmark" class="form-control" placeholder="Enter landmark" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="pincode">Pin Code</label>
+                          <input type="number" id="pincode" name="pincode" class="form-control" placeholder="Enter pin code" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobile">Mobile No.</label>
+                          <input type="number" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="city ">Address (City) </label>
+                          <input type="text" id="city" name="roadName" class="form-control" placeholder="Enter Address" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Current Address</strong></h5>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <span for="checkAddress" style="font-size: 14px; color: #495057;"> Check, if Permanent Address is same as Current Address: </span>
+                          <input type="checkbox" name="checkAddress" id="checkAddress" class="mx-1">
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="HouseNo">House No.</label>
+                           <input type="text" id="HouseNo" name="HouseNo" class="form-control" placeholder="Enter House Number" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="colony">Colony Name</label>
+                           <input type="text" id="colony" name="colony" class="form-control" placeholder="Enter Mohalla / Colony Name" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="street">Street</label>
+                          <input type="text" id="street" name="street" class="form-control" placeholder="Enter street name">
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="landmark ">Landmark</label>
+                          <input type="text" id="landmark" name="landmark" class="form-control" placeholder="Enter landmark" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="pincode">Pin Code</label>
+                          <input type="number" id="pincode" name="pincode" class="form-control" placeholder="Enter pin code" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobile">Mobile No.</label>
+                          <input type="number" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="form-group">
+                          <label for="city ">Address (City) </label>
+                          <input type="text" id="city" name="roadName" class="form-control" placeholder="Enter Address" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Owners Details</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="ownerName">Owner Name</label>
+                          <p>PROPERTY OWNER</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="relation">Relation</label>
+                            <select class="form-select" id="relation" name="relation" required>
+                              <option value="">Select</option>
+                              <option value="s/o">S/O</option>
+                              <option value="d/o">D/O</option>
+                              <option value="w/o">W/O</option>
+                              <option value="c/o">C/O</option>
+                           </select>    
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="guardianName">Guardian Name</label>
+                          <input type="text" id="guardianName" name="guardianName" class="form-control" placeholder="Enter guardian name" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="age">Age</label>
+                          <input type="number" id="age" name="age" class="form-control" placeholder="Enter age" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobileNo">Mobile No.</label>
+                          <input type="number" id="mobileNo" name="mobileNo" class="form-control" placeholder="Enter mobile number" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="gender">Gender</label>
+                            <select class="form-select" id="gender" name="gender" required>
+                              <option value="">Select</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="other">Other</option>
+                            </select>    
+                        </div>                       
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="occupation">Occupation</label>
+                            <select class="form-select" id="occupation" name="occupation" required>
+                              <option value="">Select</option>
+                              <option value="service">Service</option>
+                              <option value="business">Business</option>
+                              <option value="housewife">House-Wife</option>
+                              <option value="others">Other</option>
+                            </select>    
+                        </div>                       
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Floor Details</strong></h5>
+                      <div class="col-lg-10 col-md-8 col-sm-12">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                              <label for="floorName">Floor Name </label>
+                                <select class="form-select" id="floorName" name="floorName" required>
+                                  <option value="">Select</option>
+                                  <option value="">Basement - 1</option>
+                                  <option value="">Ground Floor</option>
+                              </select>    
+                            </div>                       
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                              <label for="useType">Usage Type</label>
+                                <select class="form-select" id="useType" name="useType" required>
+                                  <option value="">Select</option>
+                                  <option value="">Residential</option>
+                                  <option value="">Commercial</option>
+                              </select>    
+                            </div>                       
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                              <label for="usageCategory ">Usage Category</label>
+                                <select class="form-select" id="usageCategory" name="usageCategory" required>
+                                  <option value="">Select</option>
+                                  <option value="">4/5 Star Hotel</option>
+                                  <option value="">Airport</option>
+                              </select>    
+                            </div>                       
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                              <label for="fromYear">From Year</label>
+                                <select class="form-select" id="fromYear" name="fromYear" required>
+                                  <option value="">Select</option>
+                                  <option value="">2020-2021</option>
+                                  <option value="">2021-2022</option>
+                                </select>    
+                            </div>                       
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                              <label for="uptoYear">Upto Year</label>
+                                <select class="form-select" id="uptoYear" name="uptoYear">
+                                  <option value="">Select</option>
+                                  <option value="">2024-2025</option>
+                                  <option value="">2025-2026</option>
+                                </select>    
+                            </div>                       
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                              <label for="builtUpArea">Built Up Area (in Sq ft)</label>
+                              <input type="text" id="builtUpArea" name="builtUpArea" class="form-control" placeholder="Enter builtup area" required>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-4 col-sm-12">
+                        <div class="row">
+                          <div class="col-lg-2 col-md-4 col-sm-12 mx-2">
+                            <button type="submit" class="btn btn-primary btn-sm my-2" name="submit"><strong>Add</strong></button>
+
+                            <button type="submit" class="btn btn-danger btn-sm" name="submit"><strong>Remove</strong></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-print-none">
+                        <p class="text-center pt-3">
+                            <a href="#"><button type="submit" class="btn btn-success btn-sm" name="submit"><strong>Preview</strong></button></a>
+                        </p>
+                    </div>
+                  </div>
                   </div>
 
                 </div>
