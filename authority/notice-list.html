@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Report</title>
+    <title>Notice List</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,7 +685,7 @@
                 <div class="collapse" id="inactivProperty">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="#">
+                      <a href="search-property.html">
                         <span class="sub-item">Inactive Property</span>
                       </a>
                     </li>
@@ -875,7 +875,7 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Counter Report</h4>
+              <h4 class="fw-bold mb-3">Notice List</h4>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
                   <a href="index.html">
@@ -892,7 +892,7 @@
                   <i class="ri-arrow-right-s-line"></i>
                 </li>
                 <li class="nav-item">
-                  <span class="op-7">Counter Report</span>
+                  <span class="op-7">Notice List</span>
                 </li>
               </ul>
             </div>
@@ -900,54 +900,36 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header d-print-none">
+                    <div class="form-group">
                       <div class="row">
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="startDate">Start Date</label>
+                              <label for="startDate">Start Date <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="startDate" name="startDate" value="2026-01-23" required>
                             </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="endDate">End Date</label>
+                              <label for="endDate">End Date <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="endDate" name="endDate" value="2026-01-23" required>
                             </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="wardNo">Ward No.</label>
+                              <label for="wardNo">Ward No. <i class="ri-asterisk"></i></label>
                                 <select class="form-select" id="wardNo" name="wardNo" required>
                                   <option value="">All</option>
                                   <option value="1">1</option>
                                   <option value="2">2</option>
-                                  <option value="3">3</option>
                                 </select>    
                             </div>                       
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="operatorName">Operator Name</label>
-                                <select class="form-select" id="operatorName" name="operatorName">
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="taxType">Tax Type</label>
-                                <select class="form-select" id="taxType" name="taxType" required>
-                                  <option value="">UD Tax</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select> 
-                            </div>                          
                           </div>
                       </div>
                       <div class="col-12 py-3 text-center">
                           <button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button>
                       </div>
+                        
+                    </div>
                   </div>
 
                   <div class="card-body">
@@ -955,71 +937,39 @@
                           <div class="d-print-none">
                             <p class="text-start">
                                 <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
-                                <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
                             </p>
                           </div>
-                      <table id="basic-datatables" class="display table table-hover table-bordered">
+                      <table id="basic-datatables" class="display table table-hover table-bordered table-head-bg-light">
                         <thead>
                           <tr>
-                            <th colspan="23" class="text-center"><strong>Report from None To None</strong></th>
-                          </tr>
-                          <tr>
-                            <th colspan="8" class="text-center"><strong>Total Collection: <span class="text-primary">0.00</span></strong></th>
-                            <th colspan="8" class="text-center"><strong>Total Bounce: <span class="text-primary">0</span></strong></th>
-                            <th colspan="7" class="text-center"><strong>Net Collection: <span class="text-primary">0</span></strong></th>
+                            <th colspan="15" class="text-center"><strong>Notice List <span>None</span> To <span>None</span></strong></th>
                           </tr>
                           <tr>
                             <th>#</th>
-                            <th>Ack. No</th>
-                            <th>Service. No</th>
                             <th>Ward No.</th>
-                            <th>Zone Name</th>
+                            <th>Application No.</th>
+                            <th>Service No.</th>
+                            <th>Assessment Type</th>
                             <th>Owner Name</th>
                             <th>Mobile No.</th>
-                            <th>Usage Type</th>
-                            <th>From Year</th>
-                            <th>Upto Year</th>
-                            <th>Tran. Date</th>
-                            <th>Tran. No</th>
-                            <th>Mode</th>
-                            <th>Cheque/DD No</th>
-                            <th>Cheque Date</th>
-                            <th>Bank</th>
-                            <th>Branch</th>
-                            <th>Penalty</th>
-                            <th>Discount</th>
-                            <th>Amount Received</th>
-                            <th>Total Due</th>
-                            <th>Tax Collector</th>
+                            <th>Notice No</th>
+                            <th>Notice Type</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td>None</td>
-                            <td><a href="property/prop-view.html" target="_blank">516624422</a></td>
-                            <td>4</td>
-                            <td>Murlipura</td>
-                            <td>B.K.MALPANI NARAYAN MALPANI</td>
-                            <td>9784542912</td>
-                            <td>Mixed</td>
-                            <td>2024-2025</td>
-                            <td>2025-2026</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>RCT1122025115166</td>
-                            <td>CHEQUE	</td>
-                            <td>005957</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>UNION BANK OF INDIA</td>
-                            <td>JAIPUR</td>
-                            <td>247.00</td>
-                            <td>247.00</td>
-                            <td>5,143.00</td>
-                            <td>0.00</td>
-                            <td>SANNI</td>
+                            <td>133</td>
+                            <td>SAF313547294</td>
+                            <td>313547294</td>
+                            <td>Reassessment</td>
+                            <td>VIMLESH SAINI</td>
+                            <td>1111111111</td>
+                            <td>NOT/3/13/830</td>
+                            <td>Ex-Party</td>
                             <td class="d-print-none">
-                              <button class="btn btn-info btn-sm" onclick="openModal('image', 'src/images/tc-visit/sample_image.jpg')">View</button>
+                              <a href="notice.html"><button class="btn btn-info btn-sm">View</button></a>
                             </td>
                           </tr>
                         </tbody>
@@ -1106,30 +1056,24 @@
             ]);
           $("#addRowModal").modal("hide");
         });
+
+        
+        
       });
 
 
-    function printTable(areaID) 
-    {
-        var printContent = document.getElementById(areaID).innerHTML;
-        var originalContent = document.body.innerHTML;
-        document.body.innerHTML = printContent;
-        window.print();
-        document.body.innerHTML = originalContent;
-    }
-
-    function exportExcel() {
-        let table = $('#basic-datatables').DataTable();
-        let data = table.rows({ search: 'applied' }).data().toArray();
-        let ws = XLSX.utils.aoa_to_sheet([
-            table.columns().header().toArray().map(th => th.innerText),
-            ...data
-        ]);
-        let wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-        XLSX.writeFile(wb, "data.xlsx");
-    }
-
+        function exportExcel() {
+          let table = $('#basic-datatables').DataTable();
+          let data = table.rows({ search: 'applied' }).data().toArray();
+          let ws = XLSX.utils.aoa_to_sheet([
+              table.columns().header().toArray().map(th => th.innerText),
+              ...data
+          ]);
+          let wb = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+          XLSX.writeFile(wb, "data.xlsx");
+        }
+    
       let scale = 1;
       const step = 0.2;
       const minScale = 0.5;

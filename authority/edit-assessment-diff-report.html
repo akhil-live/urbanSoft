@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Report</title>
+    <title>Edit Assessment Difference Report</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -875,7 +875,7 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Counter Report</h4>
+              <h4 class="fw-bold mb-3">Edit Assessment Difference Report</h4>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
                   <a href="index.html">
@@ -892,7 +892,7 @@
                   <i class="ri-arrow-right-s-line"></i>
                 </li>
                 <li class="nav-item">
-                  <span class="op-7">Counter Report</span>
+                  <span class="op-7">Edit Assessment Difference Report</span>
                 </li>
               </ul>
             </div>
@@ -903,21 +903,21 @@
                       <div class="row">
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="startDate">Start Date</label>
+                              <label for="startDate">Start Date <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="startDate" name="startDate" value="2026-01-23" required>
                             </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="endDate">End Date</label>
+                              <label for="endDate">End Date <i class="ri-asterisk"></i></label>
                               <input type="date" class="form-control" id="endDate" name="endDate" value="2026-01-23" required>
                             </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="wardNo">Ward No.</label>
+                              <label for="wardNo">Ward No. <i class="ri-asterisk"></i></label>
                                 <select class="form-select" id="wardNo" name="wardNo" required>
-                                  <option value="">All</option>
+                                  <option value="">ALL</option>
                                   <option value="1">1</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -926,21 +926,18 @@
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="operatorName">Operator Name</label>
-                                <select class="form-select" id="operatorName" name="operatorName">
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
+                              <label for="serviceNo">Service No.</label>
+                              <input type="number" class="form-control" id="serviceNo" placeholder="Enter Service Number">                          
+                            </div>
                           </div>
                           <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="form-group">
-                              <label for="taxType">Tax Type</label>
+                              <label for="taxType">Demand Difference</label>
                                 <select class="form-select" id="taxType" name="taxType" required>
-                                  <option value="">UD Tax</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
+                                  <option value="">ALL</option>
+                                  <option value="">Increment</option>
+                                  <option value="">Decrement</option>
+                                  <option value="">No Change</option>
                                 </select> 
                             </div>                          
                           </div>
@@ -955,78 +952,126 @@
                           <div class="d-print-none">
                             <p class="text-start">
                                 <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
-                                <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
                             </p>
                           </div>
-                      <table id="basic-datatables" class="display table table-hover table-bordered">
+                      <table id="basic-datatables" class="display table table-hover table-bordered table-head-bg-light">
                         <thead>
                           <tr>
-                            <th colspan="23" class="text-center"><strong>Report from None To None</strong></th>
-                          </tr>
-                          <tr>
-                            <th colspan="8" class="text-center"><strong>Total Collection: <span class="text-primary">0.00</span></strong></th>
-                            <th colspan="8" class="text-center"><strong>Total Bounce: <span class="text-primary">0</span></strong></th>
-                            <th colspan="7" class="text-center"><strong>Net Collection: <span class="text-primary">0</span></strong></th>
+                            <th colspan="34" class="text-center"><strong>Edit Assessment Difference Report From Date <span>None</span> To <span>None</span></strong></th>
                           </tr>
                           <tr>
                             <th>#</th>
-                            <th>Ack. No</th>
                             <th>Service. No</th>
                             <th>Ward No.</th>
                             <th>Zone Name</th>
                             <th>Owner Name</th>
                             <th>Mobile No.</th>
-                            <th>Usage Type</th>
-                            <th>From Year</th>
-                            <th>Upto Year</th>
-                            <th>Tran. Date</th>
-                            <th>Tran. No</th>
-                            <th>Mode</th>
-                            <th>Cheque/DD No</th>
-                            <th>Cheque Date</th>
-                            <th>Bank</th>
-                            <th>Branch</th>
-                            <th>Penalty</th>
-                            <th>Discount</th>
-                            <th>Amount Received</th>
-                            <th>Total Due</th>
-                            <th>Tax Collector</th>
-                            <th>Action</th>
+                            <th>Permanent Address</th>
+                            <th>Edit Assessment Date</th>
+                            <th>Applied By</th>
+                            <th>New Road Type</th>
+                            <th>Old Road Type</th>
+                            <th>Plot Area</th>
+                            <th>Old Plot Area</th>
+                            <th>Vacant Area</th>
+                            <th>Old Vacant Area</th>
+                            <th>Plinth Area</th>
+                            <th>Old Plinth Area</th>
+                            <th>Ward Area</th>
+                            <th>Old Ward Area</th>
+                            <th>Previous Demand</th>
+                            <th>Current Demand</th>
+                            <th>Previous BuiltUp Area</th>
+                            <th>Current BuiltUp Area</th>
+                            <th>Res. BuiltUp</th>
+                            <th>Comm. BuiltUp</th>
+                            <th>Ind. BuiltUp</th>
+                            <th>Inst. BuiltUp</th>
+                            <th>Previous Res. BuiltUp</th>
+                            <th>Previous Comm. BuiltUp</th>
+                            <th>Previous Ind. BuiltUp</th>
+                            <th>Previous Inst. BuiltUp</th>
+                            <th>Remarks</th>
+                            <th>Document</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
+                            <td>2116590486</td>
+                            <td>59</td>
+                            <td>Jagatpura</td>
+                            <td>PUSHPA DEVI</td>
+                            <td>9460455855</td>
+                            <td>261/814 PARTAP NAGAR SECTER 26 SANGANER JAGATPURA JAIPUR</td>
+                            <td>03-02-2026</td>
+                            <td>KAMLESH MEENA</td>
+                            <td>Exterior Road</td>
+                            <td>Exterior Road</td>
+                            <td>146.0</td>
+                            <td>146.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>146.0</td>
+                            <td>146.0</td>
+                            <td>PRATAP NAGAR SCHEME-UP TO 30 FEET ROAD</td>
+                            <td>PRATAP NAGAR SCHEME-UP TO 30 FEET ROAD</td>
                             <td>None</td>
-                            <td><a href="property/prop-view.html" target="_blank">516624422</a></td>
-                            <td>4</td>
-                            <td>Murlipura</td>
-                            <td>B.K.MALPANI NARAYAN MALPANI</td>
-                            <td>9784542912</td>
-                            <td>Mixed</td>
-                            <td>2024-2025</td>
-                            <td>2025-2026</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>RCT1122025115166</td>
-                            <td>CHEQUE	</td>
-                            <td>005957</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>UNION BANK OF INDIA</td>
+                            <td>7197.0</td>
+                            <td>3528.0</td>
+                            <td>3528.0</td>
+                            <td>1314.0</td>
+                            <td>2214.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>1314.0</td>
+                            <td>2214.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>None</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>1881149049</td>
+                            <td>88</td>
+                            <td>Civil Line</td>
+                            <td>SANTOSH KHANDELWAL/ SUNIL KHANDELWAL	</td>
+                            <td>9982419739</td>
                             <td>JAIPUR</td>
-                            <td>247.00</td>
-                            <td>247.00</td>
-                            <td>5,143.00</td>
-                            <td>0.00</td>
-                            <td>SANNI</td>
+                            <td>21-02-2026</td>
+                            <td>PREETI BHANDARI</td>
+                            <td>Exterior Road</td>
+                            <td>Exterior Road</td>
+                            <td>533.33</td>
+                            <td>533.33</td>
+                            <td>211.11</td>
+                            <td>211.11</td>
+                            <td>322.22</td>
+                            <td>322.22</td>
+                            <td>SHASTRI NAGAR MAIN ROAD</td>
+                            <td>SHASTRI NAGAR MAIN ROAD</td>
+                            <td>None</td>
+                            <td>517153.0</td>
+                            <td>42400.0</td>
+                            <td>15800.0</td>
+                            <td>3400.0</td>
+                            <td>12400.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>12200.0</td>
+                            <td>30200.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>Demand Update</td>
                             <td class="d-print-none">
-                              <button class="btn btn-info btn-sm" onclick="openModal('image', 'src/images/tc-visit/sample_image.jpg')">View</button>
+                              <button class="btn btn-info btn-sm" onclick="openModal('pdf', 'src/images/tc-visit/sample.pdf')">View</button>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -1108,16 +1153,6 @@
         });
       });
 
-
-    function printTable(areaID) 
-    {
-        var printContent = document.getElementById(areaID).innerHTML;
-        var originalContent = document.body.innerHTML;
-        document.body.innerHTML = printContent;
-        window.print();
-        document.body.innerHTML = originalContent;
-    }
-
     function exportExcel() {
         let table = $('#basic-datatables').DataTable();
         let data = table.rows({ search: 'applied' }).data().toArray();
@@ -1130,7 +1165,7 @@
         XLSX.writeFile(wb, "data.xlsx");
     }
 
-      let scale = 1;
+    let scale = 1;
       const step = 0.2;
       const minScale = 0.5;
       const maxScale = 4;

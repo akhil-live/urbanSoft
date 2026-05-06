@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Report</title>
+    <title>HTax DCB Report</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -517,103 +517,108 @@
                 <div class="collapse" id="propertySurvey">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="#">
+                      <a href="survey-report.html">
                         <span class="sub-item">Survey Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-summary-report.html">
                         <span class="sub-item">Survey Summary Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-team-summary.html">
                         <span class="sub-item">Survey Team Summary</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <span class="sub-item">Ex-Party Survey Notice</span>
+                      <a href="survey-notice-list.html">
+                        <span class="sub-item">Survey Notice List</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-pending-report.html">
                         <span class="sub-item">Survey Pending Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <span class="sub-item">Wardwiser Survey Report</span>
+                      <a href="ex-party-survey-notice.html">
+                        <span class="sub-item">Ex-Party Survey Notice</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-level-summary-report.html">
+                        <span class="sub-item">Survey Level Summary Report</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="bulk-survey-notice.html">
                         <span class="sub-item">Bulk Survey Notice Print</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <span class="sub-item">Survey Level Summary Report</span>
+                      <a href="wardwise-survey-report.html">
+                        <span class="sub-item">Wardwise Survey Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-notice-recived-list.html">
                         <span class="sub-item">Survey Notice Recieved List</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <span class="sub-item">Survey Level Summary Report</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="sub-item">Survey Notice Recieved</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
+                      <a href="survey-notice-recived-report.html">
                         <span class="sub-item">Survey Notice Recieved Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <span class="sub-item">Survey Notice Distribution Report</span>
+                      <a href="survey-notice-distributed-report.html">
+                        <span class="sub-item">Survey Notice Distributed Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-short-report.html">
                         <span class="sub-item">Survey Short Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="userwise-forward-summary.html">
+                        <span class="sub-item">Userwise Forward Summary</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="userwise-survey-edit-report.html">
                         <span class="sub-item">Userwise Survey Edit Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="fo-modify-survey-report.html">
                         <span class="sub-item">FO Modification report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-geotagging-report.html">
                         <span class="sub-item">Survey Geotagging Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="survey-visit-report.html">
                         <span class="sub-item">Survey Visit Report</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="search-survey-property-visit.html">
                         <span class="sub-item">TL Survey Visit</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="tl-survey-visit-report.html">
                         <span class="sub-item">TL Survey Visit Report</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="search-survey-ward-update.html">
+                        <span class="sub-item">Survey Ward Update</span>
                       </a>
                     </li>
                   </ul>
@@ -839,43 +844,10 @@
           <!-- End Navbar -->
         </div>
 
-        <div class="modal fade" id="fileModal" tabindex="-1" >
-          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <h5 class="modal-title">File Preview</h5>
-
-                <div class="btn-group me-2 ms-2">
-                  <button id="fullscreenBtn" class="btn btn-sm btn-outline-primary d-none" onclick="toggleFullscreen()">
-                    <i class="ri-fullscreen-line"></i>
-                  </button>
-                </div>
-
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-              </div>
-
-              <div class="modal-body">
-
-                <div id="zoomControls" class="mb-2 text-center d-none">
-                  <button class="btn btn-sm btn-info" onclick="zoomIn()"><i class="ri-add-line"></i></button>
-                  <button class="btn btn-sm btn-info" onclick="zoomOut()"><i class="ri-subtract-line"></i></button>
-                  <button class="btn btn-sm btn-secondary" onclick="resetZoom()">Reset</button>
-                </div>
-
-                <div id="fileContainer"
-                    style="width:100%; height:75vh; max-height:calc(100vh - 160px); overflow:auto; text-align:center;">
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Counter Report</h4>
+              <h4 class="fw-bold mb-3">Htax DCB Report</h4>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
                   <a href="index.html">
@@ -892,7 +864,7 @@
                   <i class="ri-arrow-right-s-line"></i>
                 </li>
                 <li class="nav-item">
-                  <span class="op-7">Counter Report</span>
+                  <span class="op-7">Htax DCB Report</span>
                 </li>
               </ul>
             </div>
@@ -901,132 +873,106 @@
                 <div class="card">
                   <div class="card-header d-print-none">
                       <div class="row">
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="startDate">Start Date</label>
-                              <input type="date" class="form-control" id="startDate" name="startDate" value="2026-01-23" required>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="endDate">End Date</label>
-                              <input type="date" class="form-control" id="endDate" name="endDate" value="2026-01-23" required>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="wardNo">Ward No.</label>
-                                <select class="form-select" id="wardNo" name="wardNo" required>
-                                  <option value="">All</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                </select>    
-                            </div>                       
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="operatorName">Operator Name</label>
-                                <select class="form-select" id="operatorName" name="operatorName">
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="taxType">Tax Type</label>
-                                <select class="form-select" id="taxType" name="taxType" required>
-                                  <option value="">UD Tax</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select> 
-                            </div>                          
-                          </div>
+                        <div class="col-lg-4 col-md-3 col-sm-6">
+                          <div class="form-group">
+                            <label for="wardNo">Ward No. <i class="ri-asterisk"></i></label>
+                              <select class="form-select" id="wardNo" name="wardNo">
+                                <option value="">All</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                              </select>         
+                          </div>                  
+                        </div>
                       </div>
-                      <div class="col-12 py-3 text-center">
+                      <div class="row" style="padding:2px 0 2px 24px; color: red;">OR</div>
+                      <div class="row" >
+                        <div class="col-lg-4 col-md-3 col-sm-6">
+                          <div class="form-group">
+                            <label for="serviceNo">Service No.</label>
+                            <input type="text" class="form-control" id="serviceNo" name="serviceNo" value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 p-3 text-start">
                           <button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button>
                       </div>
                   </div>
 
                   <div class="card-body">
-                    <div class="table-responsive" id="printableArea">
+                    <div class="table-responsive">
                           <div class="d-print-none">
                             <p class="text-start">
                                 <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
-                                <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
                             </p>
                           </div>
-                      <table id="basic-datatables" class="display table table-hover table-bordered">
+                      <table id="basic-datatables" class="display table table-hover table-bordered table-head-bg-light">
                         <thead>
                           <tr>
-                            <th colspan="23" class="text-center"><strong>Report from None To None</strong></th>
-                          </tr>
-                          <tr>
-                            <th colspan="8" class="text-center"><strong>Total Collection: <span class="text-primary">0.00</span></strong></th>
-                            <th colspan="8" class="text-center"><strong>Total Bounce: <span class="text-primary">0</span></strong></th>
-                            <th colspan="7" class="text-center"><strong>Net Collection: <span class="text-primary">0</span></strong></th>
+                            <th colspan="25" class="text-start">
+                              <strong>Demand and Collection Report For (2025-2026)</strong>
+                            </th>
                           </tr>
                           <tr>
                             <th>#</th>
-                            <th>Ack. No</th>
-                            <th>Service. No</th>
                             <th>Ward No.</th>
+                            <th>Acknowledgement No.</th>
+                            <th>Service No.</th>
                             <th>Zone Name</th>
+                            <th>Road Type</th>
                             <th>Owner Name</th>
+                            <th>Guardian Name</th>
                             <th>Mobile No.</th>
+                            <th>Property Type</th>
                             <th>Usage Type</th>
-                            <th>From Year</th>
-                            <th>Upto Year</th>
-                            <th>Tran. Date</th>
-                            <th>Tran. No</th>
-                            <th>Mode</th>
-                            <th>Cheque/DD No</th>
-                            <th>Cheque Date</th>
-                            <th>Bank</th>
-                            <th>Branch</th>
+                            <th>Address</th>
+                            <th>Plot Area</th>
+                            <th>Arrear Demand</th>
+                            <th>Current Demand</th>
+                            <th>Total Demand</th>
+                            <th>Arrear Collection</th>
+                            <th>Current Collection</th>
                             <th>Penalty</th>
-                            <th>Discount</th>
-                            <th>Amount Received</th>
-                            <th>Total Due</th>
-                            <th>Tax Collector</th>
-                            <th>Action</th>
+                            <th>Rebate</th>
+                            <th>Advance</th>
+                            <th>Total Collection</th>
+                            <th>Arrear Outstanding Demand</th>
+                            <th>Current Outstanding Demand</th>
+                            <th>Total Outstanding Demand</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
+                            <td>89</td>
                             <td>None</td>
-                            <td><a href="property/prop-view.html" target="_blank">516624422</a></td>
-                            <td>4</td>
-                            <td>Murlipura</td>
-                            <td>B.K.MALPANI NARAYAN MALPANI</td>
-                            <td>9784542912</td>
-                            <td>Mixed</td>
-                            <td>2024-2025</td>
-                            <td>2025-2026</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>RCT1122025115166</td>
-                            <td>CHEQUE	</td>
-                            <td>005957</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>UNION BANK OF INDIA</td>
-                            <td>JAIPUR</td>
-                            <td>247.00</td>
-                            <td>247.00</td>
-                            <td>5,143.00</td>
+                            <td>513042928</td>
+                            <td>Civil Line</td>
+                            <td>Exterior Road</td>
+                            <td>SUN LIGHT STEEL TUBE</td>
+                            <td></td>
+                            <td>9111111111</td>
+                            <td>Reassessment</td>
+                            <td>Residential</td>
+                            <td>c0/08 jaipur path vf JAIPUR 202019</td>
+                            <td>1,297.00</td>
+                            <td>1,200.00</td>
+                            <td>400.00</td>
+                            <td>1,600.00</td>
                             <td>0.00</td>
-                            <td>SANNI</td>
-                            <td class="d-print-none">
-                              <button class="btn btn-info btn-sm" onclick="openModal('image', 'src/images/tc-visit/sample_image.jpg')">View</button>
-                            </td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>1,200.00</td>
+                            <td>400.0</td>
+                            <td>1,600.00</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -1108,16 +1054,6 @@
         });
       });
 
-
-    function printTable(areaID) 
-    {
-        var printContent = document.getElementById(areaID).innerHTML;
-        var originalContent = document.body.innerHTML;
-        document.body.innerHTML = printContent;
-        window.print();
-        document.body.innerHTML = originalContent;
-    }
-
     function exportExcel() {
         let table = $('#basic-datatables').DataTable();
         let data = table.rows({ search: 'applied' }).data().toArray();
@@ -1129,108 +1065,6 @@
         XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
         XLSX.writeFile(wb, "data.xlsx");
     }
-
-      let scale = 1;
-      const step = 0.2;
-      const minScale = 0.5;
-      const maxScale = 4;
-      let isFullscreen = false;
-
-      function openModal(type, fileUrl) {
-        const container = document.getElementById('fileContainer');
-        const zoomControls = document.getElementById('zoomControls');
-        const fullscreenBtn = document.getElementById('fullscreenBtn');
-
-        scale = 1;
-        container.innerHTML = '';
-        zoomControls.classList.add('d-none');
-        fullscreenBtn.classList.add('d-none');
-
-        if (type === 'image') {
-          zoomControls.classList.remove('d-none');
-          fullscreenBtn.classList.remove('d-none');
-
-          container.innerHTML = `
-            <img id="previewImage"
-                src="${fileUrl}"
-                class="img-fluid"
-                style="transform:scale(1); transition:transform .15s ease; cursor:zoom-in; user-select: none;">
-          `;
-
-          enableImageInteractions();
-        }
-
-        if (type === 'pdf') {
-          
-          container.innerHTML = `
-            <iframe src="${fileUrl}"
-                    style="width:100%; height:100%; border:none;">
-            </iframe>
-          `;
-        }
-
-        new bootstrap.Modal(document.getElementById('fileModal')).show();
-      }
-
-
-      function zoomIn() {
-        if (scale < maxScale) scale += step;
-        applyZoom();
-      }
-
-      function zoomOut() {
-        if (scale > minScale) scale -= step;
-        applyZoom();
-      }
-
-      function resetZoom() {
-        scale = 1;
-        applyZoom();
-      }
-
-      function applyZoom() {
-        const img = document.getElementById('previewImage');
-        if (img) {
-          img.style.transform = `scale(${scale})`;
-        }
-      }
-
-      function enableImageInteractions() {
-        const img = document.getElementById('previewImage');
-        const container = document.getElementById('fileContainer');
-
-        img.addEventListener('wheel', function (e) {
-          e.preventDefault();
-          e.deltaY < 0 ? zoomIn() : zoomOut();
-        });
-
-        img.addEventListener('dblclick', function () {
-          scale = scale === 1 ? 2 : 1;
-          applyZoom();
-        });
-      }
-
-      function toggleFullscreen() {
-        const modalContent = document.querySelector('#fileModal .modal-content');
-
-        if (!document.fullscreenElement) {
-          modalContent.requestFullscreen();
-          isFullscreen = true;
-        } else {
-          document.exitFullscreen();
-          isFullscreen = false;
-        }
-      }
-
-      document.getElementById('fileModal')
-        .addEventListener('hidden.bs.modal', () => {
-          document.getElementById('fileContainer').innerHTML = '';
-          scale = 1;
-          if (document.fullscreenElement) {
-            document.exitFullscreen();
-          }
-        });
-
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Report</title>
+    <title>Notice</title>
      <link rel="shortcut icon" href="../assets/images/logo/raj_favicon.png" type="image/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,7 +685,7 @@
                 <div class="collapse" id="inactivProperty">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="#">
+                      <a href="search-property.html">
                         <span class="sub-item">Inactive Property</span>
                       </a>
                     </li>
@@ -875,155 +875,179 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
-              <h4 class="fw-bold mb-3">Counter Report</h4>
-              <ul class="breadcrumbs mb-3">
-                <li class="nav-home">
-                  <a href="index.html">
-                    <i class="ri-home-3-line"></i>
-                  </a>
-                </li>
-                <li class="separator">
-                  <i class="ri-arrow-right-s-line"></i>
-                </li>
-                <li class="nav-home">
-                  <span class="op-7">UD Tax Report</span>
-                </li>
-                <li class="separator">
-                  <i class="ri-arrow-right-s-line"></i>
-                </li>
-                <li class="nav-item">
-                  <span class="op-7">Counter Report</span>
-                </li>
-              </ul>
+              <h4 class="fw-bold mb-3">Notice</h4>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header d-print-none">
-                      <div class="row">
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="startDate">Start Date</label>
-                              <input type="date" class="form-control" id="startDate" name="startDate" value="2026-01-23" required>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="endDate">End Date</label>
-                              <input type="date" class="form-control" id="endDate" name="endDate" value="2026-01-23" required>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="wardNo">Ward No.</label>
-                                <select class="form-select" id="wardNo" name="wardNo" required>
-                                  <option value="">All</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                </select>    
-                            </div>                       
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="operatorName">Operator Name</label>
-                                <select class="form-select" id="operatorName" name="operatorName">
-                                  <option value="">All</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select>         
-                            </div>                  
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="form-group">
-                              <label for="taxType">Tax Type</label>
-                                <select class="form-select" id="taxType" name="taxType" required>
-                                  <option value="">UD Tax</option>
-                                  <option value="">ABCD</option>
-                                  <option value="">EFHG</option>
-                                </select> 
-                            </div>                          
-                          </div>
-                      </div>
-                      <div class="col-12 py-3 text-center">
-                          <button type="submit" class="btn btn-primary btn-sm" name="submit" id="orSearch"><i class="fa fa-search"></i> Search</button>
-                      </div>
+              <div class="col-md-12 col-12">
+                <div class="card card-stats card-round">
+                  <div class="card-header d-print-none text-start">
+                    <a href="notice-list.html"><button class="btn btn-black btn-sm"><strong><i class="ri-arrow-left-circle-line"></i></i> Back</strong></button></a>
                   </div>
-
                   <div class="card-body">
-                    <div class="table-responsive" id="printableArea">
-                          <div class="d-print-none">
-                            <p class="text-start">
-                                <button type="submit" class="btn btn-success btn-sm" name="submit" id="exportExcel" onclick="exportExcel()"><strong><i class="ri-file-excel-line"></i> Export Excel</strong></button>
-                                <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
-                            </p>
-                          </div>
-                      <table id="basic-datatables" class="display table table-hover table-bordered">
-                        <thead>
-                          <tr>
-                            <th colspan="23" class="text-center"><strong>Report from None To None</strong></th>
-                          </tr>
-                          <tr>
-                            <th colspan="8" class="text-center"><strong>Total Collection: <span class="text-primary">0.00</span></strong></th>
-                            <th colspan="8" class="text-center"><strong>Total Bounce: <span class="text-primary">0</span></strong></th>
-                            <th colspan="7" class="text-center"><strong>Net Collection: <span class="text-primary">0</span></strong></th>
-                          </tr>
-                          <tr>
-                            <th>#</th>
-                            <th>Ack. No</th>
-                            <th>Service. No</th>
-                            <th>Ward No.</th>
-                            <th>Zone Name</th>
-                            <th>Owner Name</th>
-                            <th>Mobile No.</th>
-                            <th>Usage Type</th>
-                            <th>From Year</th>
-                            <th>Upto Year</th>
-                            <th>Tran. Date</th>
-                            <th>Tran. No</th>
-                            <th>Mode</th>
-                            <th>Cheque/DD No</th>
-                            <th>Cheque Date</th>
-                            <th>Bank</th>
-                            <th>Branch</th>
-                            <th>Penalty</th>
-                            <th>Discount</th>
-                            <th>Amount Received</th>
-                            <th>Total Due</th>
-                            <th>Tax Collector</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>None</td>
-                            <td><a href="property/prop-view.html" target="_blank">516624422</a></td>
-                            <td>4</td>
-                            <td>Murlipura</td>
-                            <td>B.K.MALPANI NARAYAN MALPANI</td>
-                            <td>9784542912</td>
-                            <td>Mixed</td>
-                            <td>2024-2025</td>
-                            <td>2025-2026</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>RCT1122025115166</td>
-                            <td>CHEQUE	</td>
-                            <td>005957</td>
-                            <td>Dec. 1, 2025</td>
-                            <td>UNION BANK OF INDIA</td>
-                            <td>JAIPUR</td>
-                            <td>247.00</td>
-                            <td>247.00</td>
-                            <td>5,143.00</td>
-                            <td>0.00</td>
-                            <td>SANNI</td>
-                            <td class="d-print-none">
-                              <button class="btn btn-info btn-sm" onclick="openModal('image', 'src/images/tc-visit/sample_image.jpg')">View</button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    
+                    <div class="row" style="width:200mm;height:auto;margin:auto; border:#567EBF dotted 2px;padding:8px;" id="printableArea">
+                      <div class="table-responsive demandPrintView" style="width:100%; background:#FFFFFF; padding: 1px;">
+                        <table class="display table table-borderless" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 0px; border-bottom: none;">
+                                <div style="float:left; width:100px; padding:1px;  text-align:left; ">
+                                  <img src="static/images/logo/janani_logo.png" alt="Janani Logo" width="70">
+                                </div>
+                                <div style="float:right; text-align:right; width:160px; padding:1px;   ">
+                                  <img src="static/images/logo/swachh_bharat.jpg" alt="swachh_bharat Logo" width="160" style="margin-top:10px;margin-bottom: 0px;">
+                                </div>
+                                <div class="text-center" style=" text-align:center; color:#003B5D; line-height:28px;  padding-top:5px; margin: auto;">
+                                  <span style="font-weight:bold; font-size:24px">कार्यालय नगर निगम जयपुर</span>
+                                </div>
+                                
+                                
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="display table table-borderless" width="100%" style="margin-bottom: 2px;">
+                          <tbody>
+                            <tr>
+                              <td width="12%" class="text-start" style="border-bottom: 0px;">
+                                 क्रमांक: <span></span>
+                              </td>
+                              <td width="22%" style="border-bottom: 0px;">
+                                 <strong>NOT/3/13/830</strong>
+                              </td>
+                              <td width="25%" style="border-bottom: 0px;">
+                              </td>
+                              <td width="15%" class="text-end" style="border-bottom: 0px;">
+                                 दिनांक :
+                              </td>
+                              <td width="25%" class="text-start" style="border-bottom: 0px;">
+                                 <strong style="width:80px;border-bottom: 2px dotted black;">13-02-2026</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="12%" class="text-start" style="border-bottom: 0px;">
+                                सर्विस संख्या: <span></span>
+                             </td>
+                             <td width="25%" style="border-bottom: 0px;">
+                                <strong>313547294</strong>
+                             </td>
+                             <td width="20%" style="border-bottom: 0px;">
+                             </td>
+                            </tr>
+                            <tr>
+                              <td width="12%" class="text-start" style="border-bottom: 0px;">
+                                सर्वे संख्या: <span></span>
+                             </td>
+                             <td width="25%" style="border-bottom: 0px;">
+                                <strong>313547294</strong>
+                             </td>
+                             <td width="20%" style="border-bottom: 0px;">
+                             </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="display table table-borderless" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 0px; border-bottom: 0px;">
+                                <div class="text-center" style=" text-align:center; color:#003B5D; line-height:28px;  padding-top:5px; margin: auto;">
+                                  <span style="font-weight:bold; font-size:22px">नोटिस</span>
+                                  <br>
+                                  <span style="font-size:14px;">(राजस्थान नगरपालिका अधिनियम 2009 की धारा 114, 115 एवं 126 के अन्तर्गत)</span>
+                                </div>
+                                
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div style="margin-bottom:10px; line-height: 2;">
+                          <table class="display table table-borderless" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="border-bottom: 0px;">
+                                  सम्पति मालिक/प्रतिनिधि का नाम एवं पता                               
+                                </td>                                
+                              </tr>
+                              <tr>
+                                <td style="border-bottom: 0px;"><strong>B.K.MALPANI NARAYAN MALPANI,</strong></td>
+                              </tr>
+                              <tr>
+                                <td style="border-bottom: 0px;"><strong>0 None RAJ.HIGH.SCHOOL KE SAMNE MAIN SIKAR ROAD HARMADA GAON</strong></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div style="margin-bottom:10px;">
+                          <table class="display table table-borderless" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="border-bottom: 0px; text-align: justify; text-indent: 60px;">
+                                  <span>विषयः- नगरीय विकास कर के निर्धारण के संबंध में सूचना देने बाबत्।</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="border-bottom: 0px; text-align: justify; text-indent: 30px;">
+                                  <span>उपर्युक्त विषयान्तर्गत लेख है कि राज्य सरकार द्वारा राजस्थान नगर पालिका (नगरीय विकास कर) नियम 2007 के अन्तर्गत नगर निगम सीमा में स्थित भूमि एवं भवनो पर नगरीय विकास कर प्रभावशी है।</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="border-bottom: 0px; text-align: justify; text-indent: 30px;">
+                                  <span>नगर निगम जयपुर GEO Tagged Survey एवं राजस्व वसूली कार्य हेतु नगर निगम जयपुर द्वारा M/s Sparrow Softech Pvt. Ltd. को दिनांक 08-07-2020 को कार्यादेश दिया जा चुका है। जिस क्रम में दिनांक 08-10-2020 से नगर निगम, जयपुर, ग्रेटर के समस्त जोनों में कार्य प्रारम्भ कर दिया गया है। परन्तु यह जानकारी में आया है कि आप द्वारा कम्पनी द्वारा किये जा रहे सर्वे में सहयोग नहीं किया जा रहा है।</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="border-bottom: 0px; text-align: justify; text-indent: 30px;">
+                                  <span>अतः जरिये नोटिस आपको पाबन्द किया जाता है कि सर्वे हेतु आपकी उक्त संपत्ति की सूचना मय दस्तावेज यथा पट्टा, साईट प्लान, रजिस्ट्री, एग्रीमेन्ट आदि की प्रति तीन दिवस में सर्वेकर्ता कम्पनी M/s Sparrow Softech Pvt. Ltd. के प्रतिनिधि को उपलब्ध करवाये अन्यथा सूचना प्रदान नहीं करने पर राजस्थान नगर पालिका अधिनियम 2009 की धारा 114, 115 व 126 के अन्तर्गत कार्यवाही अमल में लाई जाकर तथा उक्त सम्पति का Ex Party कर निर्धारण कर दिया जावेगा जिसकी समस्त जिम्मेदारी आपकी होगी।</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div style="margin-bottom:10px;">
+                          <table class="display table table-borderless" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="border-bottom: 0px; text-align: justify;">
+                                  <span><strong> नोटः-  उक्त भवन व भूखण्ड से संबंधित/नगरीय विकास कर जमा की रशीद / बिल हो तो प्रति संलग्न करें।</strong></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <table class="display table table-borderless" width="100%">
+                            <tbody>
+                              <tr>
+                                <td colspan="4" style="border-bottom: 0px;">
+                                  <table class="display table table-borderless" width="100%" style="margin-bottom: 2rem; border-bottom: 0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td width="40%" style="border-bottom: 0px; padding-left: 0px !important;" class="text-start">
+                                         
+                                        </td>
+                                        <td width="40%" style="border-bottom: 0px; float: right; margin-top: 10px;" class="text-end"> 
+                                          <span>उपायुक्त/राजस्व अधिकारी</span>
+                                          <br>
+                                          <span style="width:80px;border-bottom: 2px dotted black;">MANSAROVAR</span> <span class="ms-2">जोन</span>
+                                          <br>
+                                          <span>नगर निगम जयपुर</span>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="d-print-none">
+                        <p class="text-center pt-2">
+                            <button type="submit" class="btn btn-info btn-sm" onclick="printTable('printableArea')"><strong><i class="ri-printer-line"></i> Print</strong></button>
+                        </p>
                     </div>
                   </div>
 
@@ -1106,10 +1130,13 @@
             ]);
           $("#addRowModal").modal("hide");
         });
+
+        
+        
       });
 
 
-    function printTable(areaID) 
+      function printTable(areaID) 
     {
         var printContent = document.getElementById(areaID).innerHTML;
         var originalContent = document.body.innerHTML;
@@ -1117,120 +1144,7 @@
         window.print();
         document.body.innerHTML = originalContent;
     }
-
-    function exportExcel() {
-        let table = $('#basic-datatables').DataTable();
-        let data = table.rows({ search: 'applied' }).data().toArray();
-        let ws = XLSX.utils.aoa_to_sheet([
-            table.columns().header().toArray().map(th => th.innerText),
-            ...data
-        ]);
-        let wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-        XLSX.writeFile(wb, "data.xlsx");
-    }
-
-      let scale = 1;
-      const step = 0.2;
-      const minScale = 0.5;
-      const maxScale = 4;
-      let isFullscreen = false;
-
-      function openModal(type, fileUrl) {
-        const container = document.getElementById('fileContainer');
-        const zoomControls = document.getElementById('zoomControls');
-        const fullscreenBtn = document.getElementById('fullscreenBtn');
-
-        scale = 1;
-        container.innerHTML = '';
-        zoomControls.classList.add('d-none');
-        fullscreenBtn.classList.add('d-none');
-
-        if (type === 'image') {
-          zoomControls.classList.remove('d-none');
-          fullscreenBtn.classList.remove('d-none');
-
-          container.innerHTML = `
-            <img id="previewImage"
-                src="${fileUrl}"
-                class="img-fluid"
-                style="transform:scale(1); transition:transform .15s ease; cursor:zoom-in; user-select: none;">
-          `;
-
-          enableImageInteractions();
-        }
-
-        if (type === 'pdf') {
-          
-          container.innerHTML = `
-            <iframe src="${fileUrl}"
-                    style="width:100%; height:100%; border:none;">
-            </iframe>
-          `;
-        }
-
-        new bootstrap.Modal(document.getElementById('fileModal')).show();
-      }
-
-
-      function zoomIn() {
-        if (scale < maxScale) scale += step;
-        applyZoom();
-      }
-
-      function zoomOut() {
-        if (scale > minScale) scale -= step;
-        applyZoom();
-      }
-
-      function resetZoom() {
-        scale = 1;
-        applyZoom();
-      }
-
-      function applyZoom() {
-        const img = document.getElementById('previewImage');
-        if (img) {
-          img.style.transform = `scale(${scale})`;
-        }
-      }
-
-      function enableImageInteractions() {
-        const img = document.getElementById('previewImage');
-        const container = document.getElementById('fileContainer');
-
-        img.addEventListener('wheel', function (e) {
-          e.preventDefault();
-          e.deltaY < 0 ? zoomIn() : zoomOut();
-        });
-
-        img.addEventListener('dblclick', function () {
-          scale = scale === 1 ? 2 : 1;
-          applyZoom();
-        });
-      }
-
-      function toggleFullscreen() {
-        const modalContent = document.querySelector('#fileModal .modal-content');
-
-        if (!document.fullscreenElement) {
-          modalContent.requestFullscreen();
-          isFullscreen = true;
-        } else {
-          document.exitFullscreen();
-          isFullscreen = false;
-        }
-      }
-
-      document.getElementById('fileModal')
-        .addEventListener('hidden.bs.modal', () => {
-          document.getElementById('fileContainer').innerHTML = '';
-          scale = 1;
-          if (document.fullscreenElement) {
-            document.exitFullscreen();
-          }
-        });
-
+    
     </script>
 </body>
 </html>
