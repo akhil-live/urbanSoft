@@ -844,6 +844,39 @@
           <!-- End Navbar -->
         </div>
 
+        <div class="modal fade" id="fileModal" tabindex="-1" >
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title">File Preview</h5>
+
+                <div class="btn-group me-2 ms-2">
+                  <button id="fullscreenBtn" class="btn btn-sm btn-outline-primary d-none" onclick="toggleFullscreen()">
+                    <i class="ri-fullscreen-line"></i>
+                  </button>
+                </div>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <div class="modal-body">
+
+                <div id="zoomControls" class="mb-2 text-center d-none">
+                  <button class="btn btn-sm btn-info" onclick="zoomIn()"><i class="ri-add-line"></i></button>
+                  <button class="btn btn-sm btn-info" onclick="zoomOut()"><i class="ri-subtract-line"></i></button>
+                  <button class="btn btn-sm btn-secondary" onclick="resetZoom()">Reset</button>
+                </div>
+
+                <div id="fileContainer"
+                    style="width:100%; height:75vh; max-height:calc(100vh - 160px); overflow:auto; text-align:center;">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="container">
           <div class="page-inner">
             <div class="page-header d-print-none">
@@ -870,7 +903,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="card">
+                <div class="card card-stats card-round">
                   <div class="card-header d-print-none">
                     <div class="form-group">
                       <div class="row">
@@ -886,7 +919,213 @@
                       </div>
                     </div>
                   </div>
-
+                  <div class="card-body">
+                    <div class="row">
+                      <h5 class="pb-1"><strong>Basic Details</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="usage">Old Service No.</label>
+                           <p class="fw-bold">None</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="applicationNo">Application No.</label>
+                           <p class="fw-bold">None</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="serviceNo">Service No.</label>
+                          <p class="fw-bold">516436735</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="appliedDate">Applied Date</label>
+                          <p class="fw-bold">28-07-2020</p>
+                        </div>                        
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="ward">Ward</label>
+                          <p class="fw-bold">8</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                          <label for="wardArea">Ward Area </label>
+                          <p class="fw-bold">VIDHYADHAR NAGAR-VIDYADHAR NAGAR AREA</p>
+                        </div>     
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Owners Details</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="ownerName">Owner Name</label>
+                          <p class="fw-bold">B.K.MALPANI NARAYAN MALPANI</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="relation">Relation</label>
+                          <p class="fw-bold">W/O</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="guardianName">Guardian Name</label>
+                          <p class="fw-bold">B.K.MALPANI NARAYAN MALPANI</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="gender">Gender</label>
+                          <p class="fw-bold">MALE</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="age">Age</label>
+                          <p class="fw-bold">0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="mobileNo">Mobile No.</label>
+                          <p class="fw-bold">9784542912</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Property Details</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="roadType">Road Type</label>
+                          <p class="fw-bold">0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="vaacantArea">Vacant Area</label>
+                          <p class="fw-bold">0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="plinthArea">Plinth Area</label>
+                          <p class="fw-bold">0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="plotArea">Plot Area</label>
+                          <p class="fw-bold">0</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Trasaction Details</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="usage">Transaction Amount</label>
+                          <p class="fw-bold">6603.0</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="usagedSub">Transaction Date</label>
+                          <p class="fw-bold">30-05-2026</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="usagedSub">Transaction By</label>
+                          <p class="fw-bold">SUBHASH CHANDRA</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="usagedSub">Transaction Mode</label>
+                          <p class="fw-bold">CHEQUE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5 class="pt-2"><strong>Trasaction Update</strong></h5>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="form-group">
+                          <label for="paymentMode">Payment mode</label>
+                            <select class="form-select" id="paymentMode" name="paymentMode" required>
+                              <option value="">Select pay mode</option>
+                              <option value="">CHEQUE</option>
+                              <option value="">DEMAND DRAFT</option>
+                              <option value="">CARD</option>
+                              <option value="">RTGS</option>
+                              <option value="">IMPS</option>
+                              <option value="">UPI</option>
+                            </select>    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="refNo">Reference No.</label>
+                           <input type="text" id="refNo" name="refNo" class="form-control" placeholder="Enter reference no." required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="refDate">Reference Date</label>
+                          <input type="date" class="form-control" id="refDate" name="refDate" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="branchName">Branch Name</label>
+                           <input type="text" id="branchName" name="branchName" class="form-control" placeholder="Enter branch name" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="bankName">Bank Name</label>
+                           <input type="text" id="bankName" name="bankName" class="form-control" placeholder="Enter bank name" required>
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="form-group">
+                          <label for="uploadImage">Upload Image </label>
+                          <br>
+                          <span class="text-danger">Note :- It will be updated againts Transaction.</span>
+                          <input type="file" class="form-control mb-2" id="uploadImage" name="uploadImage" />
+                          <a href="javascript:void(0);" onclick="openModal('image', '../taxCollector/upload/images/propimage.jpg')"><img width='200px' src='../taxCollector/upload/images/propimage.jpg'/></a>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="form-group">
+                          <label for="uploadImage">Transaction Document </label>
+                          <br>
+                            <a href="javascript:void(0);" onclick="openModal('image', '../taxCollector/upload/images/propimage.jpg')"><img width='200px' src='../taxCollector/upload/images/propimage.jpg'/></a>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                          <label for="yourRemarks">Remarks</label>
+                          <textarea class="form-control" name="yourRemarks" id="yourRemarks" cols="20" rows="4"  placeholder="Type your remarks here.."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                        
+                    <div class="d-print-none">
+                        <p class="text-center pt-3">
+                            <button type="submit" class="btn btn-success btn-sm" name="submit" id="submit"><strong>Update</strong></button>
+                        </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -911,5 +1150,107 @@
 <script src="src/assets/js/datatables/datatables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <script src="src/assets/js/admin.js"></script>
+<script>
+      let scale = 1;
+      const step = 0.2;
+      const minScale = 0.5;
+      const maxScale = 4;
+      let isFullscreen = false;
+
+      function openModal(type, fileUrl) {
+        const container = document.getElementById('fileContainer');
+        const zoomControls = document.getElementById('zoomControls');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        scale = 1;
+        container.innerHTML = '';
+        zoomControls.classList.add('d-none');
+        fullscreenBtn.classList.add('d-none');
+
+        if (type === 'image') {
+          zoomControls.classList.remove('d-none');
+          fullscreenBtn.classList.remove('d-none');
+
+          container.innerHTML = `
+            <img id="previewImage"
+                src="${fileUrl}"
+                class="img-fluid"
+                style="transform:scale(1); transition:transform .15s ease; cursor:zoom-in; user-select: none;">
+          `;
+
+          enableImageInteractions();
+        }
+
+        if (type === 'pdf') {
+          
+          container.innerHTML = `
+            <iframe src="${fileUrl}"
+                    style="width:100%; height:100%; border:none;">
+            </iframe>
+          `;
+        }
+
+        new bootstrap.Modal(document.getElementById('fileModal')).show();
+      }
+
+
+      function zoomIn() {
+        if (scale < maxScale) scale += step;
+        applyZoom();
+      }
+
+      function zoomOut() {
+        if (scale > minScale) scale -= step;
+        applyZoom();
+      }
+
+      function resetZoom() {
+        scale = 1;
+        applyZoom();
+      }
+
+      function applyZoom() {
+        const img = document.getElementById('previewImage');
+        if (img) {
+          img.style.transform = `scale(${scale})`;
+        }
+      }
+
+      function enableImageInteractions() {
+        const img = document.getElementById('previewImage');
+        const container = document.getElementById('fileContainer');
+
+        img.addEventListener('wheel', function (e) {
+          e.preventDefault();
+          e.deltaY < 0 ? zoomIn() : zoomOut();
+        });
+
+        img.addEventListener('dblclick', function () {
+          scale = scale === 1 ? 2 : 1;
+          applyZoom();
+        });
+      }
+
+      function toggleFullscreen() {
+        const modalContent = document.querySelector('#fileModal .modal-content');
+
+        if (!document.fullscreenElement) {
+          modalContent.requestFullscreen();
+          isFullscreen = true;
+        } else {
+          document.exitFullscreen();
+          isFullscreen = false;
+        }
+      }
+
+      document.getElementById('fileModal')
+        .addEventListener('hidden.bs.modal', () => {
+          document.getElementById('fileContainer').innerHTML = '';
+          scale = 1;
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          }
+        });
+</script>
 </body>
 </html>
